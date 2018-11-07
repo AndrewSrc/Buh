@@ -13,6 +13,11 @@
 		C545ED0B218C9D4A00B1B7D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545ED09218C9D4A00B1B7D9 /* Main.storyboard */; };
 		C545ED0D218C9D7100B1B7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */; };
 		C545ED10218C9D7100B1B7D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0E218C9D7100B1B7D9 /* LaunchScreen.storyboard */; };
+		C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6D521933CBA00F7E92D /* WalletService.swift */; };
+		C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6D721933E4F00F7E92D /* Network.swift */; };
+		C5F1F6DC2193414300F7E92D /* addWalletContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6DB2193414300F7E92D /* addWalletContracts.swift */; };
+		C5F1F6DE2193423400F7E92D /* AddWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6DD2193423400F7E92D /* AddWalletViewController.swift */; };
+		C5F1F6E02193428300F7E92D /* AddWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6DF2193428300F7E92D /* AddWalletPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C545ED0F218C9D7100B1B7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C545ED11218C9D7100B1B7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F1F6D521933CBA00F7E92D /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		C5F1F6D721933E4F00F7E92D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C5F1F6DB2193414300F7E92D /* addWalletContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addWalletContracts.swift; sourceTree = "<group>"; };
+		C5F1F6DD2193423400F7E92D /* AddWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletViewController.swift; sourceTree = "<group>"; };
+		C5F1F6DF2193428300F7E92D /* AddWalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		C5F1F6D02193260F00F7E92D /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C5F1F6D9219340DA00F7E92D /* UserStories */,
 				C545ED07218C9D4A00B1B7D9 /* SecondViewController.swift */,
 				C545ED05218C9D4A00B1B7D9 /* FirstViewController.swift */,
 				C545ED09218C9D4A00B1B7D9 /* Main.storyboard */,
@@ -78,6 +89,7 @@
 		C5F1F6D12193262C00F7E92D /* BussinesLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C5F1F6D521933CBA00F7E92D /* WalletService.swift */,
 			);
 			path = BussinesLogicLayer;
 			sourceTree = "<group>";
@@ -85,6 +97,7 @@
 		C5F1F6D22193264500F7E92D /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C5F1F6D721933E4F00F7E92D /* Network.swift */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -105,6 +118,24 @@
 				C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C5F1F6D9219340DA00F7E92D /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				C5F1F6DA219340EA00F7E92D /* AddWallet */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		C5F1F6DA219340EA00F7E92D /* AddWallet */ = {
+			isa = PBXGroup;
+			children = (
+				C5F1F6DB2193414300F7E92D /* addWalletContracts.swift */,
+				C5F1F6DD2193423400F7E92D /* AddWalletViewController.swift */,
+				C5F1F6DF2193428300F7E92D /* AddWalletPresenter.swift */,
+			);
+			path = AddWallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F1F6DE2193423400F7E92D /* AddWalletViewController.swift in Sources */,
+				C5F1F6DC2193414300F7E92D /* addWalletContracts.swift in Sources */,
+				C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */,
+				C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */,
 				C545ED08218C9D4A00B1B7D9 /* SecondViewController.swift in Sources */,
+				C5F1F6E02193428300F7E92D /* AddWalletPresenter.swift in Sources */,
 				C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */,
 				C545ED06218C9D4A00B1B7D9 /* FirstViewController.swift in Sources */,
 			);
