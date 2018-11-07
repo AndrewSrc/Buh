@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-C9-gOo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections>
                                     <tableViewSection id="DSn-PT-fAN">
@@ -277,10 +277,16 @@
                                     </tableViewSection>
                                 </sections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVy-aE-Hq5">
+                                <rect key="frame" x="172.5" y="572" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5eO-J8-z05" firstAttribute="bottom" secondItem="9qV-C9-gOo" secondAttribute="bottom" id="0Kz-cm-xrP"/>
+                            <constraint firstItem="5eO-J8-z05" firstAttribute="bottom" secondItem="HVy-aE-Hq5" secondAttribute="bottom" constant="16" id="1IA-EU-joA"/>
+                            <constraint firstItem="HVy-aE-Hq5" firstAttribute="top" secondItem="9qV-C9-gOo" secondAttribute="bottom" constant="16" id="9lV-IX-zA1"/>
+                            <constraint firstItem="HVy-aE-Hq5" firstAttribute="centerX" secondItem="bat-aD-Ki7" secondAttribute="centerX" id="aFK-FY-wNV"/>
                             <constraint firstItem="9qV-C9-gOo" firstAttribute="leading" secondItem="5eO-J8-z05" secondAttribute="leading" id="hRh-5f-Gzc"/>
                             <constraint firstItem="9qV-C9-gOo" firstAttribute="top" secondItem="5eO-J8-z05" secondAttribute="top" id="ifu-rX-6Wl"/>
                             <constraint firstItem="5eO-J8-z05" firstAttribute="trailing" secondItem="9qV-C9-gOo" secondAttribute="trailing" id="oFV-fd-vSn"/>
@@ -290,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFK-sK-bly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="-18"/>
+            <point key="canvasLocation" x="2274.4000000000001" y="-17.541229385307346"/>
         </scene>
     </scenes>
 </document>
