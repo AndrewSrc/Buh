@@ -11,5 +11,8 @@ class Wallet {
 
     var name = ""
     var balance: Float = 0
-    
+    init(name: String, balance: Float){
+        self.name = name
+        self.balance = balance
+    }
 }

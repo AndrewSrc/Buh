@@ -8,20 +8,31 @@
 
 import Foundation
 
-class WalletPresenter: WalletOutput{
+class WalletPresenter {
+    
     weak var view: WalletInput!
     var walletService: WalletService
     
+    
     init(view: WalletInput, walletService: WalletService){
-        
         self.view = view
         self.walletService = walletService
+        self.walletService.delegate = self
     }
-    
+}
+
+extension WalletPresenter: WalletOutput{
+    func getWallets() {
+        walletService.fetchWallets()
+    }
     func onAddPressed() {
         
     }
-    func getWallets() {
-        
+}
+
+extension WalletPresenter: WalletServiceDelegate {
+    
+    func didGet(wallets: [Wallet]) {
+        view.set(wallets: wallets)
     }
 }

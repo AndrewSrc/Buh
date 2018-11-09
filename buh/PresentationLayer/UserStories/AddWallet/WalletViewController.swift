@@ -8,27 +8,26 @@
 
 import UIKit
 
-class WalletViewController: UIViewController, WalletInput {
-    func set(wallets: [Wallet]) {
-        
-    }
+class WalletViewController: UIViewController {
+
     
     var presenter: WalletOutput!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        assebly()
+        presenter.getWallets()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func assebly(){
+        let network = URLSessionNetwork()
+        let service = WalletServiceImp(networkService: network)
+        let presenter = WalletPresenter(view: self, walletService: service)
+        self.presenter = presenter
     }
-    */
 
+}
+
+extension WalletViewController: WalletInput{
+    func set(wallets: [Wallet]) {
+        print(wallets)
+    }
 }
