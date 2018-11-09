@@ -166,6 +166,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="QDf-bW-pPP" secondAttribute="trailing" constant="16" id="yWQ-Ed-OwI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hkR-cV-wvW" kind="show" id="UDW-vU-aE3"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iZ9-73-31h">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -286,5 +289,55 @@
             </objects>
             <point key="canvasLocation" x="2286" y="-17"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2zE-J4-wGR">
+            <objects>
+                <viewController id="hkR-cV-wvW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hzf-Fx-dnL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-HW-PBw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-wF-avw">
+                                <rect key="frame" x="0.0" y="586" width="319" height="24"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-fY-MV9">
+                                <rect key="frame" x="327" y="578" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UeF-E6-4HV"/>
+                                    <constraint firstAttribute="height" constant="40" id="j2S-oV-IjS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="plus"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yZr-5h-dWV" firstAttribute="bottom" secondItem="6fh-wF-avw" secondAttribute="bottom" constant="8" id="02v-Hf-IyS"/>
+                            <constraint firstItem="yZr-5h-dWV" firstAttribute="trailing" secondItem="zxC-fY-MV9" secondAttribute="trailing" constant="8" id="Atd-za-c00"/>
+                            <constraint firstItem="6fh-wF-avw" firstAttribute="leading" secondItem="yZr-5h-dWV" secondAttribute="leading" id="Fqi-K2-iDN"/>
+                            <constraint firstItem="R5J-HW-PBw" firstAttribute="top" secondItem="yZr-5h-dWV" secondAttribute="top" id="HuB-CM-4zX"/>
+                            <constraint firstItem="yZr-5h-dWV" firstAttribute="trailing" secondItem="R5J-HW-PBw" secondAttribute="trailing" id="SaN-iR-By9"/>
+                            <constraint firstItem="zxC-fY-MV9" firstAttribute="top" secondItem="R5J-HW-PBw" secondAttribute="bottom" id="aPM-oV-XW6"/>
+                            <constraint firstItem="R5J-HW-PBw" firstAttribute="leading" secondItem="yZr-5h-dWV" secondAttribute="leading" id="fqu-9e-xsb"/>
+                            <constraint firstItem="6fh-wF-avw" firstAttribute="top" secondItem="R5J-HW-PBw" secondAttribute="bottom" constant="8" id="hP1-AJ-uD6"/>
+                            <constraint firstItem="zxC-fY-MV9" firstAttribute="bottom" secondItem="yZr-5h-dWV" secondAttribute="bottom" id="ptj-P7-dqC"/>
+                            <constraint firstItem="zxC-fY-MV9" firstAttribute="leading" secondItem="6fh-wF-avw" secondAttribute="trailing" constant="8" id="sTs-Dw-v5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yZr-5h-dWV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DhX-fZ-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3071" y="-21"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="50" height="50"/>
+    </resources>
 </document>

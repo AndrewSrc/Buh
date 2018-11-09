@@ -12,6 +12,4 @@ class AddWalletPresenter: AddWalletOutput{
     func onAddPressed() {
         
     }
-    
-    
 }
