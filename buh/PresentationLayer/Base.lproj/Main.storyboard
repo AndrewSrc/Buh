@@ -289,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="2286" y="-17"/>
         </scene>
-        <!--View Controller-->
+        <!--Wallet View Controller-->
         <scene sceneID="2zE-J4-wGR">
             <objects>
-                <viewController id="hkR-cV-wvW" sceneMemberID="viewController">
+                <viewController id="hkR-cV-wvW" customClass="WalletViewController" customModule="buh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hzf-Fx-dnL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,7 +302,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-wF-avw">
-                                <rect key="frame" x="0.0" y="586" width="319" height="24"/>
+                                <rect key="frame" x="0.0" y="578" width="327" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -318,23 +318,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yZr-5h-dWV" firstAttribute="bottom" secondItem="6fh-wF-avw" secondAttribute="bottom" constant="8" id="02v-Hf-IyS"/>
+                            <constraint firstItem="yZr-5h-dWV" firstAttribute="bottom" secondItem="6fh-wF-avw" secondAttribute="bottom" id="02v-Hf-IyS"/>
                             <constraint firstItem="yZr-5h-dWV" firstAttribute="trailing" secondItem="zxC-fY-MV9" secondAttribute="trailing" constant="8" id="Atd-za-c00"/>
                             <constraint firstItem="6fh-wF-avw" firstAttribute="leading" secondItem="yZr-5h-dWV" secondAttribute="leading" id="Fqi-K2-iDN"/>
                             <constraint firstItem="R5J-HW-PBw" firstAttribute="top" secondItem="yZr-5h-dWV" secondAttribute="top" id="HuB-CM-4zX"/>
                             <constraint firstItem="yZr-5h-dWV" firstAttribute="trailing" secondItem="R5J-HW-PBw" secondAttribute="trailing" id="SaN-iR-By9"/>
                             <constraint firstItem="zxC-fY-MV9" firstAttribute="top" secondItem="R5J-HW-PBw" secondAttribute="bottom" id="aPM-oV-XW6"/>
+                            <constraint firstItem="6fh-wF-avw" firstAttribute="top" secondItem="R5J-HW-PBw" secondAttribute="bottom" id="fJN-ue-LST"/>
                             <constraint firstItem="R5J-HW-PBw" firstAttribute="leading" secondItem="yZr-5h-dWV" secondAttribute="leading" id="fqu-9e-xsb"/>
-                            <constraint firstItem="6fh-wF-avw" firstAttribute="top" secondItem="R5J-HW-PBw" secondAttribute="bottom" constant="8" id="hP1-AJ-uD6"/>
                             <constraint firstItem="zxC-fY-MV9" firstAttribute="bottom" secondItem="yZr-5h-dWV" secondAttribute="bottom" id="ptj-P7-dqC"/>
-                            <constraint firstItem="zxC-fY-MV9" firstAttribute="leading" secondItem="6fh-wF-avw" secondAttribute="trailing" constant="8" id="sTs-Dw-v5i"/>
+                            <constraint firstItem="zxC-fY-MV9" firstAttribute="leading" secondItem="6fh-wF-avw" secondAttribute="trailing" id="sTs-Dw-v5i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yZr-5h-dWV"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhX-fZ-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3071" y="-21"/>
+            <point key="canvasLocation" x="3069.5999999999999" y="-21.139430284857571"/>
         </scene>
     </scenes>
     <resources>

@@ -8,8 +8,12 @@
 
 import UIKit
 
-class AddWalletViewController: UIViewController, AddWalletInput {
-
+class WalletViewController: UIViewController, WalletInput {
+    func set(wallets: [Wallet]) {
+        
+    }
+    
+    var presenter: WalletOutput!
     override func viewDidLoad() {
         super.viewDidLoad()
 

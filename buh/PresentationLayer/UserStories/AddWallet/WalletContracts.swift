@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol AddWalletInput {
-    //func set(wallets: [Wallet])
+protocol WalletInput: class {
+    func set(wallets: [Wallet])
 }
 
-protocol  AddWalletOutput {
+protocol  WalletOutput {
+    var view: WalletInput! {get set}
+    func getWallets()
     func onAddPressed()
 }
