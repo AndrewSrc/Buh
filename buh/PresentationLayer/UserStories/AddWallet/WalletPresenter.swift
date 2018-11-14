@@ -26,7 +26,7 @@ extension WalletPresenter: WalletOutput{
         walletService.fetchWallets()
     }
     func onAddPressed() {
-        
+        walletService.addWallet()
     }
 }
 

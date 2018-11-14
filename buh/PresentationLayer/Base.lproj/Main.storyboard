@@ -328,6 +328,9 @@
                                     <constraint firstAttribute="height" constant="40" id="j2S-oV-IjS"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="plus"/>
+                                <connections>
+                                    <action selector="onAddPressed:" destination="hkR-cV-wvW" eventType="touchUpInside" id="BBN-OJ-LOz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

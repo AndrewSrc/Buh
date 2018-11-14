@@ -26,7 +26,11 @@ class WalletViewController: UIViewController {
         let presenter = WalletPresenter(view: self, walletService: service)
         self.presenter = presenter
     }
-
+    
+    @IBAction func onAddPressed(_ sender: Any) {
+        self.presenter.onAddPressed()
+    }
+    
 }
 
 extension WalletViewController: WalletInput{
