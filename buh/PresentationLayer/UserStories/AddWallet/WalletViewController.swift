@@ -44,9 +44,12 @@ UITableViewDelegate
         return wallets?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "walletCell")!
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "walletCell")!
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "walletCell")
+        //cell.sty = .
         let wallet = wallets![indexPath.row]
         cell.textLabel?.text = wallet.name
+        cell.detailTextLabel?.text = "\(wallet.balance)"
         return cell;
     }
 }

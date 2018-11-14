@@ -25,7 +25,7 @@ class WalletServiceImp:WalletService{
         self.networkService = networkService
     }
     func addWallet() {
-        networkService.performRequest()
+        //networkService.performRequest()
     }
     
     func fetchWallets() {
