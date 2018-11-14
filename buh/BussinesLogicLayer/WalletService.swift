@@ -10,6 +10,7 @@ import Foundation
 
 protocol WalletServiceDelegate: class {
     func didGet(wallets: [Wallet])
+    func didAdd(wallet: Wallet)
 }
 protocol WalletService {
     var delegate: WalletServiceDelegate? {get set}
@@ -30,7 +31,7 @@ class WalletServiceImp:WalletService{
         _ = networkService.performRequest(
             options: options, completion:
             {response, data in
-            
+                self.delegate?.didAdd(wallet: Wallet(name:"test", balance: 0))
         })
     }
     

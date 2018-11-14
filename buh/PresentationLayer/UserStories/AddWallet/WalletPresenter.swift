@@ -35,4 +35,8 @@ extension WalletPresenter: WalletServiceDelegate {
     func didGet(wallets: [Wallet]) {
         view.set(wallets: wallets)
     }
+    
+    func didAdd(wallet: Wallet) {
+        view.set(wallets: [wallet])
+    }
 }
