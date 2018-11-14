@@ -26,7 +26,7 @@ class WalletServiceImp:WalletService{
         self.networkService = networkService
     }
     func addWallet() {
-        let  url = ""
+        let  url = "http://www.google.com"
         let options = RequestOptions(url: URL(string: url)!)
         _ = networkService.performRequest(
             options: options, completion:
