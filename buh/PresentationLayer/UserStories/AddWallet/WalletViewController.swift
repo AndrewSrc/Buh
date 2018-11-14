@@ -11,6 +11,9 @@ import UIKit
 class WalletViewController: UIViewController {
 
     
+    @IBOutlet weak var table: UITableView!
+    var wallets: [Wallet]?
+    
     var presenter: WalletOutput!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +32,21 @@ class WalletViewController: UIViewController {
 extension WalletViewController: WalletInput{
     func set(wallets: [Wallet]) {
         print(wallets)
+        self.wallets = wallets
+        table.reloadData()
+    }
+}
+
+extension WalletViewController: UITableViewDataSource,
+UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wallets?.count ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "walletCell")!
+        let wallet = wallets![indexPath.row]
+        cell.textLabel?.text = wallet.name
+        return cell;
     }
 }
