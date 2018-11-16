@@ -7,12 +7,17 @@
 //
 
 
-class Wallet {
+class Wallet: Codable {
 
     var name = ""
     var balance: Float = 0
     init(name: String, balance: Float){
         self.name = name
         self.balance = balance
+    }
+    
+    enum Coding: String, CodingKey {
+        case name = "AccName"
+        case balance = "Summ"
     }
 }

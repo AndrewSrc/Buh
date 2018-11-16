@@ -25,18 +25,20 @@ extension WalletPresenter: WalletOutput{
     func getWallets() {
         walletService.fetchWallets()
     }
-    func onAddPressed() {
-        walletService.addWallet()
+    func onAddPressed(name: Wallet) {
+        walletService.addWallet(name: Wallet)
     }
 }
 
 extension WalletPresenter: WalletServiceDelegate {
     
     func didGet(wallets: [Wallet]) {
-        view.set(wallets: wallets)
+        //view.set(wallets: wallets)
+        //view.walletAdded(success: success)
+        
     }
     
-    func didAdd(wallet: Wallet) {
-        view.set(wallets: [wallet])
+    func didAdd(success: Bool) {
+        //view.set(wallets: [wallet])
     }
 }

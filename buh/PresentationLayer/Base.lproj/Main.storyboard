@@ -350,6 +350,7 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="R5J-HW-PBw" id="leW-uL-d92"/>
+                        <outlet property="walletNewName" destination="6fh-wF-avw" id="ehG-Ds-dQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhX-fZ-rEb" userLabel="First Responder" sceneMemberID="firstResponder"/>

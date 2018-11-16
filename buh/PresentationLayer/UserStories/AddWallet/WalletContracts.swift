@@ -10,10 +10,11 @@ import Foundation
 
 protocol WalletInput: class {
     func set(wallets: [Wallet])
+    func walletAdded(success: Bool)
 }
 
 protocol  WalletOutput {
     var view: WalletInput! {get set}
     func getWallets()
-    func onAddPressed()
+    func onAddPressed(name: Wallet)
 }

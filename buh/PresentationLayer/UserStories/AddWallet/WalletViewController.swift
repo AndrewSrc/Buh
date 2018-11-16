@@ -10,6 +10,7 @@ import UIKit
 
 class WalletViewController: UIViewController {
 
+    @IBOutlet weak var walletNewName: UITextField!
     
     @IBOutlet weak var table: UITableView!
     var wallets: [Wallet]?
@@ -28,7 +29,12 @@ class WalletViewController: UIViewController {
     }
     
     @IBAction func onAddPressed(_ sender: Any) {
-        self.presenter.onAddPressed()
+        if let name = walletNewName.text {
+            let walletNewObj = Wallet.init(name: name, balance: 0)
+            self.presenter.onAddPressed(name: walletNewObj)
+        }
+        
+        
     }
     
 }
@@ -38,6 +44,13 @@ extension WalletViewController: WalletInput{
         print(wallets)
         self.wallets = wallets
         table.reloadData()
+    }
+    func walletAdded (success: Bool){
+        if success {
+            presenter.getWallets()
+        } else {
+            // alert
+        }
     }
 }
 
