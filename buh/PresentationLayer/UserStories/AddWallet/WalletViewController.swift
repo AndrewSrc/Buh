@@ -30,8 +30,7 @@ class WalletViewController: UIViewController {
     
     @IBAction func onAddPressed(_ sender: Any) {
         if let name = walletNewName.text {
-            let walletNewObj = Wallet.init(name: name, balance: 0)
-            self.presenter.onAddPressed(name: walletNewObj)
+            self.presenter.onAddPressed(name: name)
         }
         
         

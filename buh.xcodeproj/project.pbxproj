@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C5223B652195D6120017A7B0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5223B642195D6120017A7B0 /* Wallet.swift */; };
+		C53B1F5821A5A4C6006261E4 /* jsontest.json in Resources */ = {isa = PBXBuildFile; fileRef = C53B1F5721A5A4C6006261E4 /* jsontest.json */; };
+		C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1F5A21A5B17C006261E4 /* AddSpendContracts.swift */; };
+		C53B1F5D21A5B25C006261E4 /* AddSpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1F5C21A5B25C006261E4 /* AddSpenViewController.swift */; };
+		C53B1F5F21A5B2A8006261E4 /* AddSpendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1F5E21A5B2A8006261E4 /* AddSpendPresenter.swift */; };
 		C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545ED03218C9D4A00B1B7D9 /* AppDelegate.swift */; };
-		C545ED06218C9D4A00B1B7D9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545ED05218C9D4A00B1B7D9 /* FirstViewController.swift */; };
-		C545ED08218C9D4A00B1B7D9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545ED07218C9D4A00B1B7D9 /* SecondViewController.swift */; };
 		C545ED0B218C9D4A00B1B7D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545ED09218C9D4A00B1B7D9 /* Main.storyboard */; };
 		C545ED0D218C9D7100B1B7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */; };
 		C545ED10218C9D7100B1B7D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0E218C9D7100B1B7D9 /* LaunchScreen.storyboard */; };
@@ -23,10 +25,12 @@
 
 /* Begin PBXFileReference section */
 		C5223B642195D6120017A7B0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C53B1F5721A5A4C6006261E4 /* jsontest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsontest.json; sourceTree = "<group>"; };
+		C53B1F5A21A5B17C006261E4 /* AddSpendContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendContracts.swift; sourceTree = "<group>"; };
+		C53B1F5C21A5B25C006261E4 /* AddSpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpenViewController.swift; sourceTree = "<group>"; };
+		C53B1F5E21A5B2A8006261E4 /* AddSpendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendPresenter.swift; sourceTree = "<group>"; };
 		C545ED00218C9D4A00B1B7D9 /* buh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C545ED03218C9D4A00B1B7D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C545ED05218C9D4A00B1B7D9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C545ED07218C9D4A00B1B7D9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C545ED0A218C9D4A00B1B7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C545ED0F218C9D7100B1B7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,9 +56,20 @@
 		C5223B632195D5B40017A7B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C53B1F5721A5A4C6006261E4 /* jsontest.json */,
 				C5223B642195D6120017A7B0 /* Wallet.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C53B1F5921A5B0F6006261E4 /* AddSpend */ = {
+			isa = PBXGroup;
+			children = (
+				C53B1F5A21A5B17C006261E4 /* AddSpendContracts.swift */,
+				C53B1F5C21A5B25C006261E4 /* AddSpenViewController.swift */,
+				C53B1F5E21A5B2A8006261E4 /* AddSpendPresenter.swift */,
+			);
+			path = AddSpend;
 			sourceTree = "<group>";
 		};
 		C545ECF7218C9D4900B1B7D9 = {
@@ -90,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				C5F1F6D9219340DA00F7E92D /* UserStories */,
-				C545ED07218C9D4A00B1B7D9 /* SecondViewController.swift */,
-				C545ED05218C9D4A00B1B7D9 /* FirstViewController.swift */,
 				C545ED09218C9D4A00B1B7D9 /* Main.storyboard */,
 			);
 			path = PresentationLayer;
@@ -134,6 +147,7 @@
 		C5F1F6D9219340DA00F7E92D /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				C53B1F5921A5B0F6006261E4 /* AddSpend */,
 				C5F1F6DA219340EA00F7E92D /* AddWallet */,
 			);
 			path = UserStories;
@@ -210,6 +224,7 @@
 				C545ED10218C9D7100B1B7D9 /* LaunchScreen.storyboard in Resources */,
 				C545ED0D218C9D7100B1B7D9 /* Assets.xcassets in Resources */,
 				C545ED0B218C9D4A00B1B7D9 /* Main.storyboard in Resources */,
+				C53B1F5821A5A4C6006261E4 /* jsontest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,11 +239,12 @@
 				C5F1F6DC2193414300F7E92D /* WalletContracts.swift in Sources */,
 				C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */,
 				C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */,
-				C545ED08218C9D4A00B1B7D9 /* SecondViewController.swift in Sources */,
+				C53B1F5D21A5B25C006261E4 /* AddSpenViewController.swift in Sources */,
 				C5F1F6E02193428300F7E92D /* WalletPresenter.swift in Sources */,
 				C5223B652195D6120017A7B0 /* Wallet.swift in Sources */,
+				C53B1F5F21A5B2A8006261E4 /* AddSpendPresenter.swift in Sources */,
+				C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */,
 				C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */,
-				C545ED06218C9D4A00B1B7D9 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ protocol WalletServiceDelegate: class {
 }
 protocol WalletService {
     var delegate: WalletServiceDelegate? {get set}
-    func addWallet(name: Wallet)
+    func addWallet(wallet: Wallet)
     func fetchWallets()
 }
 
@@ -25,9 +25,20 @@ class WalletServiceImp:WalletService{
     init(networkService: Network){
         self.networkService = networkService
     }
-    func addWallet(name: Wallet) {
-        let  url = "https://mybuh.club/Accounts_Controler.php?Class=MainAccounts&Metod1=MobileNewAccount&AccName=test"
+    func addWallet(wallet: Wallet) {
+//        if let path = Bundle.main.path(forResource: "jsontest", ofType: "json"){
+//            do {
+//                let url = URL(fileURLWithPath: path)
+//                let data = try Data(contentsOf: url, options: .mappedIfSafe)
+//                let wallets = try?
+//                    JSONDecoder().decode([Wallet].self, from: data)
+//                print (wallets)
+//
+//            } catch {}
+//        }
+        let  url = "https://mybuh.club/Accounts_Controler.php?Class=MainAccounts&Metod1=MobileNewAccount&AccName=" + wallet.name
         let options = RequestOptions(url: URL(string: url)!)
+        options.method = .post
         _ = networkService.performRequest(
             options: options, completion: {
             [unowned self] response, data in
@@ -37,19 +48,37 @@ class WalletServiceImp:WalletService{
     }
     
     func fetchWallets() {
-        let  url = "https://mybuh.club/Accounts_Controler.php?Class=MainAccounts&Metod1=MobileGetAccounts&Metod2=MobileDisplay"
-        let options = RequestOptions(url: URL(string: url)!)
+        let  urlString = "https://mybuh.club/Accounts_Controler.php?Class=MainAccounts&Metod1=MobileGetAccounts&Metod2=MobileDisplay"
+        let url = URL(string: urlString)
+        let options = RequestOptions(url: url!)
         options.method = .post
         _ = networkService.performRequest(
             options: options, completion: {
                 [unowned self] response, data in
                 if data != nil {
                     let wallets =  try? JSONDecoder().decode([Wallet].self, from: data!)
-                }
                 
-                let success = (response as! HTTPURLResponse).statusCode == 200
-                self.delegate?.didAdd(success: success)
+                if let parseWallets = wallets {
+                    DispatchQueue.main.async {
+                        self.delegate?.didGet(wallets: parseWallets)
+                    }
+                    
+                }
+                }
+//                let success = (response as! HTTPURLResponse).statusCode == 200
+//                self.delegate?.didAdd(success: success)
         })
+//
+//        if let path = Bundle.main.path(forResource: "jsontest", ofType: "json"){
+//            do {
+//                let url = URL(fileURLWithPath: path)
+//                let data = try Data(contentsOf: url, options: .mappedIfSafe)
+//                let wallets = try?
+//                    JSONDecoder().decode([Wallet].self, from: data)
+//                print (wallets)
+//
+//            } catch {}
+//        }
     }
     
 }

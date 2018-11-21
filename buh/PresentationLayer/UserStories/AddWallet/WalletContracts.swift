@@ -16,5 +16,6 @@ protocol WalletInput: class {
 protocol  WalletOutput {
     var view: WalletInput! {get set}
     func getWallets()
-    func onAddPressed(name: Wallet)
+    //func onAddPressed(wallet: Wallet)
+    func onAddPressed(name: String)
 }

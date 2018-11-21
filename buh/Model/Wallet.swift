@@ -16,7 +16,7 @@ class Wallet: Codable {
         self.balance = balance
     }
     
-    enum Coding: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name = "AccName"
         case balance = "Summ"
     }
