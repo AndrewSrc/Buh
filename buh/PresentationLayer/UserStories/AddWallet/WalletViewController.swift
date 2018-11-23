@@ -8,14 +8,18 @@
 
 import UIKit
 
+protocol WalletViewControllerDelegate: class {
+    func didSelec(wallet: Wallet)
+}
+
 class WalletViewController: UIViewController {
 
     @IBOutlet weak var walletNewName: UITextField!
-    
     @IBOutlet weak var table: UITableView!
     var wallets: [Wallet]?
-    
     var presenter: WalletOutput!
+    
+    weak var delegate: WalletViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         assebly()
@@ -67,5 +71,14 @@ UITableViewDelegate
         cell.textLabel?.text = wallet.name
         cell.detailTextLabel?.text = "\(wallet.balance)"
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let wallet = wallets?[indexPath.row]
+        if let selectedWallet = wallet{
+            delegate?.didSelec(wallet: selectedWallet)
+        }
+        navigationController?.popViewController(animated: true)
+        
     }
 }

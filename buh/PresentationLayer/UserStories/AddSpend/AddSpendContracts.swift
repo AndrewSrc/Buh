@@ -9,10 +9,10 @@
 import Foundation
 
 protocol AddSpendInput: class {
-    
+    func didAddSpend()
 }
 
 protocol  AddSpendOutput {
     var view: AddSpendInput! { get set }
-    
+    func add(spend: Spend)
 } 

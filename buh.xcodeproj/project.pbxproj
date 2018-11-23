@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C5223B652195D6120017A7B0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5223B642195D6120017A7B0 /* Wallet.swift */; };
+		C523713121A8487A0059A74A /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713021A8487A0059A74A /* Spend.swift */; };
+		C523713321A84AA60059A74A /* SpendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713221A84AA60059A74A /* SpendService.swift */; };
 		C53B1F5821A5A4C6006261E4 /* jsontest.json in Resources */ = {isa = PBXBuildFile; fileRef = C53B1F5721A5A4C6006261E4 /* jsontest.json */; };
 		C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1F5A21A5B17C006261E4 /* AddSpendContracts.swift */; };
 		C53B1F5D21A5B25C006261E4 /* AddSpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1F5C21A5B25C006261E4 /* AddSpenViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		C5223B642195D6120017A7B0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C523713021A8487A0059A74A /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
+		C523713221A84AA60059A74A /* SpendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendService.swift; sourceTree = "<group>"; };
 		C53B1F5721A5A4C6006261E4 /* jsontest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsontest.json; sourceTree = "<group>"; };
 		C53B1F5A21A5B17C006261E4 /* AddSpendContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendContracts.swift; sourceTree = "<group>"; };
 		C53B1F5C21A5B25C006261E4 /* AddSpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpenViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			children = (
 				C53B1F5721A5A4C6006261E4 /* jsontest.json */,
 				C5223B642195D6120017A7B0 /* Wallet.swift */,
+				C523713021A8487A0059A74A /* Spend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C5F1F6D521933CBA00F7E92D /* WalletService.swift */,
+				C523713221A84AA60059A74A /* SpendService.swift */,
 			);
 			path = BussinesLogicLayer;
 			sourceTree = "<group>";
@@ -239,10 +245,12 @@
 				C5F1F6DC2193414300F7E92D /* WalletContracts.swift in Sources */,
 				C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */,
 				C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */,
+				C523713321A84AA60059A74A /* SpendService.swift in Sources */,
 				C53B1F5D21A5B25C006261E4 /* AddSpenViewController.swift in Sources */,
 				C5F1F6E02193428300F7E92D /* WalletPresenter.swift in Sources */,
 				C5223B652195D6120017A7B0 /* Wallet.swift in Sources */,
 				C53B1F5F21A5B2A8006261E4 /* AddSpendPresenter.swift in Sources */,
+				C523713121A8487A0059A74A /* Spend.swift in Sources */,
 				C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */,
 				C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */,
 			);

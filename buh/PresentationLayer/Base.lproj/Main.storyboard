@@ -284,10 +284,16 @@
                             <outlet property="delegate" destination="4AS-oa-MfJ" id="Ogm-W8-0eN"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="categotyLabel" destination="7Po-Tx-Iay" id="jd3-lc-Ifb"/>
+                        <outlet property="nameTextField" destination="C1T-pM-AJx" id="E8h-r3-Wsf"/>
+                        <outlet property="summTF" destination="276-hB-qbN" id="ZZr-Ix-u8k"/>
+                        <outlet property="walletLabel" destination="QDf-bW-pPP" id="gGM-D3-hZc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uep-Fh-TDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="-17"/>
+            <point key="canvasLocation" x="2285.5999999999999" y="-17.541229385307346"/>
         </scene>
         <!--Wallet View Controller-->
         <scene sceneID="2zE-J4-wGR">
