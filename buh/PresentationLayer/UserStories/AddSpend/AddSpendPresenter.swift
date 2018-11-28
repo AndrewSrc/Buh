@@ -12,8 +12,9 @@ class AddSpendPresenter{
     weak var view: AddSpendInput!
     var spendService: SpendService
     
-    init(spendService: SpendService){
+    init(view: AddSpendInput, spendService: SpendService){
         self.spendService = spendService
+        self.view = view
     }
 }
 

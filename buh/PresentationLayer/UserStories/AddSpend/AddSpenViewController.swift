@@ -18,7 +18,16 @@ class AddSpenViewController: UITableViewController {
     
     var presenter: AddSpendOutput!
     
+    
+    
     var wallet = Wallet()
+    
+    func assembly() {
+        let network = URLSessionNetwork();
+        let service = SpendServiceImpl(networkService: network)
+        let presenter = AddSpendPresenter(view: self, spendService: service)
+        self.presenter = presenter
+    }
 //    var spendService: SpendService
 //    
 //    init(spendService: SpendService){
@@ -29,6 +38,7 @@ class AddSpenViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assembly()
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(add))
         navigationItem.rightBarButtonItem = doneButton
     }
@@ -38,7 +48,15 @@ class AddSpenViewController: UITableViewController {
         walletViewController.delegate = self
     }
     @objc func add() {
-        presenter.add(spend: <#T##Spend#>)
+        let spend = Spend(wallet: self.wallet)
+        spend.name = nameTextField.text ?? ""
+
+        
+        if let text = summTF.text,
+            let sum = Double(text) {
+            spend.summ = sum
+        }
+        presenter.add(spend: spend)
     }
     
 }
@@ -48,6 +66,7 @@ extension AddSpenViewController: AddSpendInput {
 //        spendService.add (spend: spend, complition: { [unowned self] success in
 //            self.view.didAddSpend()
 //
+            
         }
     
     

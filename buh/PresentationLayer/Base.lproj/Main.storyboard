@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1473" y="690"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="jzU-Gy-VpM">
             <objects>
-                <viewController id="Lsn-CP-Na7" sceneMemberID="viewController">
+                <viewController id="Lsn-CP-Na7" customClass="MainViewController" customModule="buh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rU0-EN-5ds">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
