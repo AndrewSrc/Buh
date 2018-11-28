@@ -11,7 +11,8 @@ import Foundation
 class Spend: Codable {
     var wallet = Wallet()
     var summ = 0.0
-    var name = ""
+    var name: String?
+    var id = 0
     
     init(){
         
@@ -23,5 +24,6 @@ class Spend: Codable {
     enum CodingKeys: String, CodingKey {
         case summ = "summ"
         case name = "ProdName"
+        case id = "id"
     }
 }
