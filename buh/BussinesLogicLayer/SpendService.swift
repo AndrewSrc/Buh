@@ -13,7 +13,7 @@ typealias FetcCompletion = ([Spend]) -> ()
 
 protocol SpendService {
     func add(spend: Spend, completion: @escaping Complition)//, complition: Complition
-    func fetch(completion: FetcCompletion)
+    func fetch(completion: @escaping FetcCompletion)
 }
 
 class SpendServiceImpl: SpendService{
@@ -22,14 +22,22 @@ class SpendServiceImpl: SpendService{
         self.networkService = networkService
     }
     
-    func fetch(completion: FetcCompletion) {
+    func fetch(completion: @escaping FetcCompletion) {
         let  url = "https://mybuh.club/Debet_Credit_Controler.php?Class=DebCred&Method1=LoadDebCred2&TypeLoad=Mobile&CurDate=13.11.2018&Method2=DisplayMobile" // + "\(spend.wallet.id)"+"&Summ=" + "\(spend.summ)"
         let options = RequestOptions(url: URL(string: url)!)
         options.method = .post
         _ = networkService.performRequest(
             options: options, completion: {
                 response, data in
-                let success = (response as! HTTPURLResponse).statusCode == 200
+                if data != nil {
+                    let spends = try? JSONDecoder().decode([Spend].self, from: data!)
+                    if let parseSpends = spends {
+                        DispatchQueue.main.async {
+                            completion(parseSpends)
+                        }
+                    }
+                }
+                //let success = (response as! HTTPURLResponse).statusCode == 200
                 
                 //self.delegate?.didAdd(success: success)
                 //completion(success)
