@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchSpends()
+        db()
     }
     func fetchSpends(){
         let service = SpendServiceImpl(networkService: URLSessionNetwork())
@@ -23,6 +25,36 @@ class MainViewController: UIViewController {
             self.spends = spends
             self.spendTable.reloadData()
         })
+    }
+    
+    func db(){
+        let context = CoreDataManager.persistentContainer.viewContext
+        let deptEntity = NSEntityDescription.entity(forEntityName: "Dept", in: context)
+        let dept = NSManagedObject(entity: deptEntity!, insertInto: context)
+        dept.setValue("dept name2", forKey: "name")
+        dept.setValue(200, forKey: "summ")
+        
+        let creditorEntity = NSEntityDescription.entity(forEntityName: "Creditor", in: context)
+        let creditor = NSManagedObject(entity: creditorEntity!, insertInto: context)
+        creditor.setValue("Vasa", forKey: "name")
+        creditor.setValue(1, forKey: "priority")
+        
+        dept.setValue(creditor, forKey: "creditor")
+        
+        //CoreDataManager.saveContext()
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Dept")
+        request.predicate = NSPredicate(format: "name = %@", "dept name")
+        
+        do {
+            let result = try context.fetch(request)
+            for dept in result as![NSManagedObject]{
+                print(dept.value(forKey: "name"))
+            }
+        } catch {
+            
+        }
+        
     }
         // Do any additional setup after loading the view.
     

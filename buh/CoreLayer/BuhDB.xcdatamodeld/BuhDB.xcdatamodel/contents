@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Creditor" representedClassName="Creditor" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="dept" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dept" inverseName="creditor" inverseEntity="Dept" syncable="YES"/>
+    </entity>
+    <entity name="Dept" representedClassName="Dept" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summ" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="creditor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Creditor" inverseName="dept" inverseEntity="Creditor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Dept" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Creditor" positionX="-54" positionY="9" width="128" height="90"/>
+    </elements>
+</model>

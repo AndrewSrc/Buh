@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C516788621BAB1120039D385 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516788521BAB1120039D385 /* CoreDataManager.swift */; };
+		C516788921BAB2A20039D385 /* BuhDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C516788721BAB2A20039D385 /* BuhDB.xcdatamodeld */; };
 		C5223B652195D6120017A7B0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5223B642195D6120017A7B0 /* Wallet.swift */; };
 		C523713121A8487A0059A74A /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713021A8487A0059A74A /* Spend.swift */; };
 		C523713321A84AA60059A74A /* SpendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713221A84AA60059A74A /* SpendService.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C516788521BAB1120039D385 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C516788821BAB2A20039D385 /* BuhDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuhDB.xcdatamodel; sourceTree = "<group>"; };
 		C5223B642195D6120017A7B0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		C523713021A8487A0059A74A /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
 		C523713221A84AA60059A74A /* SpendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendService.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C5F1F6D721933E4F00F7E92D /* Network.swift */,
+				C516788721BAB2A20039D385 /* BuhDB.xcdatamodeld */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C545ED03218C9D4A00B1B7D9 /* AppDelegate.swift */,
+				C516788521BAB1120039D385 /* CoreDataManager.swift */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 				C53B1F5F21A5B2A8006261E4 /* AddSpendPresenter.swift in Sources */,
 				C523713121A8487A0059A74A /* Spend.swift in Sources */,
 				C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */,
+				C516788921BAB2A20039D385 /* BuhDB.xcdatamodeld in Sources */,
+				C516788621BAB1120039D385 /* CoreDataManager.swift in Sources */,
 				C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +470,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C516788721BAB2A20039D385 /* BuhDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C516788821BAB2A20039D385 /* BuhDB.xcdatamodel */,
+			);
+			currentVersion = C516788821BAB2A20039D385 /* BuhDB.xcdatamodel */;
+			path = BuhDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C545ECF8218C9D4900B1B7D9 /* Project object */;
 }
