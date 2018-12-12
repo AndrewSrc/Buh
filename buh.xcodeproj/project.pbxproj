@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4101A167109F016E9963C8 /* Pods_buh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460216E7EF0A92C353BE88C9 /* Pods_buh.framework */; };
 		C516788621BAB1120039D385 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516788521BAB1120039D385 /* CoreDataManager.swift */; };
 		C516788921BAB2A20039D385 /* BuhDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C516788721BAB2A20039D385 /* BuhDB.xcdatamodeld */; };
 		C5223B652195D6120017A7B0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5223B642195D6120017A7B0 /* Wallet.swift */; };
@@ -21,6 +22,7 @@
 		C545ED0D218C9D7100B1B7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0C218C9D7100B1B7D9 /* Assets.xcassets */; };
 		C545ED10218C9D7100B1B7D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545ED0E218C9D7100B1B7D9 /* LaunchScreen.storyboard */; };
 		C554ADBD21AEE47300FC4169 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554ADBC21AEE47300FC4169 /* MainViewController.swift */; };
+		C5ECD3B721C14D63008128B1 /* DebtRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECD3B621C14D63008128B1 /* DebtRealm.swift */; };
 		C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6D521933CBA00F7E92D /* WalletService.swift */; };
 		C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6D721933E4F00F7E92D /* Network.swift */; };
 		C5F1F6DC2193414300F7E92D /* WalletContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F1F6DB2193414300F7E92D /* WalletContracts.swift */; };
@@ -29,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460216E7EF0A92C353BE88C9 /* Pods_buh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_buh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		962B3D45BD4AB3011ADE56F6 /* Pods-buh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-buh.release.xcconfig"; path = "Pods/Target Support Files/Pods-buh/Pods-buh.release.xcconfig"; sourceTree = "<group>"; };
+		A3298BD74D68946E5B6F3C84 /* Pods-buh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-buh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-buh/Pods-buh.debug.xcconfig"; sourceTree = "<group>"; };
 		C516788521BAB1120039D385 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C516788821BAB2A20039D385 /* BuhDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuhDB.xcdatamodel; sourceTree = "<group>"; };
 		C5223B642195D6120017A7B0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		C545ED0F218C9D7100B1B7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C545ED11218C9D7100B1B7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C554ADBC21AEE47300FC4169 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C5ECD3B621C14D63008128B1 /* DebtRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtRealm.swift; sourceTree = "<group>"; };
 		C5F1F6D521933CBA00F7E92D /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
 		C5F1F6D721933E4F00F7E92D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C5F1F6DB2193414300F7E92D /* WalletContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletContracts.swift; sourceTree = "<group>"; };
@@ -57,18 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4101A167109F016E9963C8 /* Pods_buh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324E8EE237D7F679FBEAB6E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3298BD74D68946E5B6F3C84 /* Pods-buh.debug.xcconfig */,
+				962B3D45BD4AB3011ADE56F6 /* Pods-buh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4604E876B223B8AB87183E5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				460216E7EF0A92C353BE88C9 /* Pods_buh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5223B632195D5B40017A7B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C53B1F5721A5A4C6006261E4 /* jsontest.json */,
 				C5223B642195D6120017A7B0 /* Wallet.swift */,
 				C523713021A8487A0059A74A /* Spend.swift */,
+				C5ECD3B621C14D63008128B1 /* DebtRealm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +113,8 @@
 			children = (
 				C545ED02218C9D4A00B1B7D9 /* buh */,
 				C545ED01218C9D4A00B1B7D9 /* Products */,
+				324E8EE237D7F679FBEAB6E3 /* Pods */,
+				4604E876B223B8AB87183E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C545ED14218C9D7100B1B7D9 /* Build configuration list for PBXNativeTarget "buh" */;
 			buildPhases = (
+				A0AE42563F15C102A2E204D6 /* [CP] Check Pods Manifest.lock */,
 				C545ECFC218C9D4A00B1B7D9 /* Sources */,
 				C545ECFD218C9D4A00B1B7D9 /* Frameworks */,
 				C545ECFE218C9D4A00B1B7D9 /* Resources */,
@@ -253,6 +281,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A0AE42563F15C102A2E204D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-buh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C545ECFC218C9D4A00B1B7D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -262,6 +315,7 @@
 				C554ADBD21AEE47300FC4169 /* MainViewController.swift in Sources */,
 				C5F1F6DC2193414300F7E92D /* WalletContracts.swift in Sources */,
 				C5F1F6D821933E4F00F7E92D /* Network.swift in Sources */,
+				C5ECD3B721C14D63008128B1 /* DebtRealm.swift in Sources */,
 				C5F1F6D621933CBA00F7E92D /* WalletService.swift in Sources */,
 				C523713321A84AA60059A74A /* SpendService.swift in Sources */,
 				C53B1F5D21A5B25C006261E4 /* AddSpenViewController.swift in Sources */,
@@ -416,6 +470,7 @@
 		};
 		C545ED15218C9D7100B1B7D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3298BD74D68946E5B6F3C84 /* Pods-buh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -433,6 +488,7 @@
 		};
 		C545ED16218C9D7100B1B7D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962B3D45BD4AB3011ADE56F6 /* Pods-buh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

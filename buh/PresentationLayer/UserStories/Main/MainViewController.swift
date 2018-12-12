@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealSwift
 
 class MainViewController: UIViewController {
 
@@ -17,8 +18,25 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchSpends()
-        db()
+        //db()
+        bdRealm()
     }
+    func bdRealm(){
+        let dept = DebtRealm()
+        dept.name = "dept name"
+        dept.summ = 200
+        let person = Person()
+        person.name = "person"
+        dept.person = person
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(dept)
+        }
+        let depts = realm.objects(Dept.self)
+        print(depts)
+    }
+    
     func fetchSpends(){
         let service = SpendServiceImpl(networkService: URLSessionNetwork())
         service.fetch(completion: {spends in
