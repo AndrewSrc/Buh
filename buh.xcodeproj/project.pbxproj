@@ -11,6 +11,8 @@
 		C516788621BAB1120039D385 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516788521BAB1120039D385 /* CoreDataManager.swift */; };
 		C516788921BAB2A20039D385 /* BuhDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C516788721BAB2A20039D385 /* BuhDB.xcdatamodeld */; };
 		C5223B652195D6120017A7B0 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5223B642195D6120017A7B0 /* Wallet.swift */; };
+		C522710A21C3EBD500D40ECD /* PriorityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522710921C3EBD500D40ECD /* PriorityControl.swift */; };
+		C522710C21C3F43E00D40ECD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522710B21C3F43E00D40ECD /* TestViewController.swift */; };
 		C523713121A8487A0059A74A /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713021A8487A0059A74A /* Spend.swift */; };
 		C523713321A84AA60059A74A /* SpendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523713221A84AA60059A74A /* SpendService.swift */; };
 		C53B1F5821A5A4C6006261E4 /* jsontest.json in Resources */ = {isa = PBXBuildFile; fileRef = C53B1F5721A5A4C6006261E4 /* jsontest.json */; };
@@ -37,6 +39,8 @@
 		C516788521BAB1120039D385 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C516788821BAB2A20039D385 /* BuhDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuhDB.xcdatamodel; sourceTree = "<group>"; };
 		C5223B642195D6120017A7B0 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C522710921C3EBD500D40ECD /* PriorityControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityControl.swift; sourceTree = "<group>"; };
+		C522710B21C3F43E00D40ECD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C523713021A8487A0059A74A /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
 		C523713221A84AA60059A74A /* SpendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendService.swift; sourceTree = "<group>"; };
 		C53B1F5721A5A4C6006261E4 /* jsontest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsontest.json; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			children = (
 				C5F1F6D9219340DA00F7E92D /* UserStories */,
 				C545ED09218C9D4A00B1B7D9 /* Main.storyboard */,
+				C522710921C3EBD500D40ECD /* PriorityControl.swift */,
+				C522710B21C3F43E00D40ECD /* TestViewController.swift */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 				C545ECFC218C9D4A00B1B7D9 /* Sources */,
 				C545ECFD218C9D4A00B1B7D9 /* Frameworks */,
 				C545ECFE218C9D4A00B1B7D9 /* Resources */,
+				8E4B8B76F31B12C8F881F0FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +289,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E4B8B76F31B12C8F881F0FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-buh/Pods-buh-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-buh/Pods-buh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0AE42563F15C102A2E204D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,7 +356,9 @@
 				C523713121A8487A0059A74A /* Spend.swift in Sources */,
 				C53B1F5B21A5B17C006261E4 /* AddSpendContracts.swift in Sources */,
 				C516788921BAB2A20039D385 /* BuhDB.xcdatamodeld in Sources */,
+				C522710A21C3EBD500D40ECD /* PriorityControl.swift in Sources */,
 				C516788621BAB1120039D385 /* CoreDataManager.swift in Sources */,
+				C522710C21C3F43E00D40ECD /* TestViewController.swift in Sources */,
 				C545ED04218C9D4A00B1B7D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

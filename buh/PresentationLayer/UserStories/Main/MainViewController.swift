@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import RealSwift
+import RealmSwift
 
 class MainViewController: UIViewController {
 
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
         try! realm.write {
             realm.add(dept)
         }
-        let depts = realm.objects(Dept.self)
+        let depts = realm.objects(DebtRealm.self)
         print(depts)
     }
     
